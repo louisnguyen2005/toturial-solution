@@ -1,0 +1,29 @@
+import React from "react";
+import Sdata from "../slide/Sdata";
+
+import "../slide/style.css";
+
+const CardTow = () => {
+  return (
+    <>
+      <div className="CardTow top slide">
+        {Sdata.map((value) => {
+          return (
+            <div className="box">
+              <div className="img">
+                <img src={value.cover} alt="" />
+              </div>
+              <div className="text">
+                <span>{value.category}</span>
+                <h2>{value.title}</h2>
+                <p>{value.desc}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
+export default CardTow;
